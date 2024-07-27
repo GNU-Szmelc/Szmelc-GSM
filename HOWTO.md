@@ -1,6 +1,9 @@
 # SZMELC-GSM Handbook
 
-<img src="https://github.com/user-attachments/assets/9d2cf65c-4dcb-43d9-a8b3-72470905748b" width="200" height="auto">
+<img src="https://github.com/user-attachments/assets/9d2cf65c-4dcb-43d9-a8b3-72470905748b" width="150" height="auto">
+<img src="https://github.com/user-attachments/assets/878d4122-7061-46e5-ab26-61a96409e648" width="250" height="auto">
+<img src="https://github.com/user-attachments/assets/823eab1e-7e12-4803-99e2-766f1c55f55e" width="175" height="auto">
+<img src="https://github.com/user-attachments/assets/c7776156-e9c6-4b4d-8a31-c45a855b0cf9" width="200" height="auto">
 
 ## Packages: 
 > (not all required, simply listed all related) {Installable via APT / Pacman}
