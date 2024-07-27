@@ -119,5 +119,6 @@ End the call:
 > You change values by `AT+CREG=X` & `AT+CGREG=X` (where X is allowed value) (0-2) \
 > To see allowed values, do `AT+CREG=?`
 
-## Documentation
-# [1](https://www.4itk.de/sms-zentralen/) [2](https://m2msupport.net/m2msupport/atcreg-network-registration/) [3](https://docs.eseye.com/Content/ELS61/ATCommands/ELS61CREG.htm) [4](https://onomondo.com/blog/at-command-cgreg/#creg-vs-cgreg-vs-cereg) [5](https://forum.arduino.cc/t/gsm-module-sim800l-no-signal/479829/9) [6](https://wiki.archlinux.org/title/Mobile_broadband_modem) [7](https://en.wikipedia.org/wiki/Mobile_broadband_modem) [8](https://www.toradex.com/pt-br/blog/how-to-use-gsm-3g-4g-in-embedded-linux-systems)
+# Documentation
+> I Highly suggest at least checking each source, they contain waay more info than this tiny handbook
+# [1](https://www.4itk.de/sms-zentralen/) [2](https://m2msupport.net/m2msupport/atcreg-network-registration/) [3](https://docs.eseye.com/Content/ELS61/ATCommands/ELS61CREG.htm) [4](https://onomondo.com/blog/at-command-cgreg/#creg-vs-cgreg-vs-cereg) [5](https://forum.arduino.cc/t/gsm-module-sim800l-no-signal/479829/9) [6](https://wiki.archlinux.org/title/Mobile_broadband_modem) [7](https://en.wikipedia.org/wiki/Mobile_broadband_modem) [8](https://www.toradex.com/pt-br/blog/how-to-use-gsm-3g-4g-in-embedded-linux-systems) [9](https://www.emnify.com/developer-blog/at-commands-for-cellular-modules)
