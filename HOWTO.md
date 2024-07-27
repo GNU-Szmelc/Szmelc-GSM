@@ -120,4 +120,4 @@ End the call:
 > To see allowed values, do `AT+CREG=?`
 
 ## Documentation
-# [1](https://www.4itk.de/sms-zentralen/) [2](https://m2msupport.net/m2msupport/atcreg-network-registration/) [3](https://docs.eseye.com/Content/ELS61/ATCommands/ELS61CREG.htm) [4](https://onomondo.com/blog/at-command-cgreg/#creg-vs-cgreg-vs-cereg) [5](https://forum.arduino.cc/t/gsm-module-sim800l-no-signal/479829/9) [6](https://wiki.archlinux.org/title/Mobile_broadband_modem)
+# [1](https://www.4itk.de/sms-zentralen/) [2](https://m2msupport.net/m2msupport/atcreg-network-registration/) [3](https://docs.eseye.com/Content/ELS61/ATCommands/ELS61CREG.htm) [4](https://onomondo.com/blog/at-command-cgreg/#creg-vs-cgreg-vs-cereg) [5](https://forum.arduino.cc/t/gsm-module-sim800l-no-signal/479829/9) [6](https://wiki.archlinux.org/title/Mobile_broadband_modem) [7](https://en.wikipedia.org/wiki/Mobile_broadband_modem)
