@@ -33,28 +33,24 @@ Screen: sudo screen /dev/ttyUSB0 115200
 Kermit: sudo kermit -> <kermit setup commands>
 ```
 
-
 ## Commands:
 ```
+======= [GENERAL] =======
 Reboot:
 - AT+CFUN=1,1
-
 Enter PIN: (XXXX is SIM card PIN)
 - AT+CPIN="XXXX"
 Verify the SIM Status:
 - AT+CPIN?
 
+======= [CHECK] =======
 Check Network Registration:
 (later set mode for each type by changing ? to =X (where X is 0-2))
 - AT+CREG? - [GSM] 
 - AT+CGREG? - [GPRS] 
 - AT+CEREG? - [LTE]
-
-Check current set service number: - AT+CSCA?
-Set service number:
-- AT+CMGS="+491760000443"
-- AT+CSCA="+491760000443"
-
+Check current set service number:
+- AT+CSCA?
 Check Signal Strength:
 - AT+CSQ
 Check if registered:
@@ -62,6 +58,10 @@ Check if registered:
 Check network operators: (list all available)
 - AT+COPS=?
 
+======= [SET] =======
+Set service number:
+- AT+CMGS="+491760000443"
+- AT+CSCA="+491760000443"
 Ensure sms settings are correct:
 - AT+CSMS=1
 FORCE REGISTER MODULE:
@@ -71,9 +71,25 @@ Set operator manually: (where 26202 is ID of operator)
 Set network mode to gsm:
 - AT+CNMP=13
 
-Send SMS: (RECEIVERNUMBER is number to receive SMS)
+======= [SMS] =======
+Send SMS: (RECEIVERNUMBER is number to receive SMS) (Then when `>`, type a message, and press Ctrl+Z to send it.)
 - AT+CMGS="+RECEIVERNUMBER"
-Then when `>`, type a message, and press Ctrl+Z to send it.
+Receive SMS: (list ALL messages)
+- AT+CMGL="ALL"
+Read specific message: (index = number)
+- AT+CMGR=index
+Delete specific message:
+- AT+CMGD=index
+
+======= [CALL] =======
+Calling: (replace +XYZ with receiver number)
+Dialout:
+- ATD+XYZ;
+Pick-up call:
+- ATA
+End the call:
+- ATH
+(When called, module will show "RING")
 ```
 
 ## Additional notes:
@@ -82,13 +98,8 @@ Then when `>`, type a message, and press Ctrl+Z to send it.
 > You should see {"CALL READY" "SMS READY.} messages after passing PIN. \
 > If you don't see anything, then make sure module is plugged directly into main USB port, not via extender. \
 > Get to know your SMS service number (can be found deep in android settings) \
-`Example: [SMS SERVICE NUMBER (germany): +491760000443]` \
-> Also nake sure your SIM is configured for your GSM module, shitty cheap modules support only G2, so you have to set it accordingly.
-
-## Quick rundown:
-> To check current values, do `AT+CREG?` & `AT+CGREG?`. You want to see `0,1` or `0,5` \
-> You change values by `AT+CREG=X` & `AT+CGREG=X` (where X is allowed value) (0-2) \
-> To see allowed values, do `AT+CREG=?`
+> Example SMS Service Number: [germany] +491760000443] \
+> Also make sure your SIM is configured for your GSM module, shitty cheap modules support only G2, so you have to set it accordingly.
 
 ## [CREG, CGREG, CEREG] Details:
 > Here's a breakdown of the possible values for +CREG responses: \
@@ -102,6 +113,11 @@ Then when `>`, type a message, and press Ctrl+Z to send it.
 3: Registration denied. 
 4: Unknown (e.g., out of coverage). 
 ```
+
+### Quick rundown on CREG...
+> To check current values, do `AT+CREG?` & `AT+CGREG?`. You want to see `0,1` or `0,5` \
+> You change values by `AT+CREG=X` & `AT+CGREG=X` (where X is allowed value) (0-2) \
+> To see allowed values, do `AT+CREG=?`
 
 ## Documentation
 # [1](https://www.4itk.de/sms-zentralen/) [2](https://m2msupport.net/m2msupport/atcreg-network-registration/) [3](https://docs.eseye.com/Content/ELS61/ATCommands/ELS61CREG.htm) [4](https://onomondo.com/blog/at-command-cgreg/#creg-vs-cgreg-vs-cereg) [5](https://forum.arduino.cc/t/gsm-module-sim800l-no-signal/479829/9)
